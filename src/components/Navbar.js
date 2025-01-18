@@ -11,9 +11,9 @@ function Navbar() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
-          <NavLink className="navbar-brand fw-bold" to="/">
+          <NavLink className="navbar-brand" to="/">
             Fabricare
           </NavLink>
           <button

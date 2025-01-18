@@ -15,8 +15,9 @@ api.interceptors.request.use(
     const token = localStorage.getItem(DB_TOKEN); // Retrieve token from local storage
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
-      config.headers.tok = token;
+      config.headers.tok = `Bearer ${token}`;
     }
+    config.headers.Accept = "application/json";
     return config;
   },
   (error) => Promise.reject(error)
@@ -50,9 +51,7 @@ export const http_post = async (path, params) => {
   if (response.statusText === null) {
     throw new Error("Failed to fetch services because response is null");
   }
-  if (response.statusText !== "OK") {
-    throw new Error("Failed to fetch services because response is not OK");
-  }
+
   const data = response.data;
   if (!data) {
     throw new Error("Failed to fetch services because data is null");
@@ -77,12 +76,6 @@ export const http_get = async (path) => {
     throw new Error("Failed to fetch data because response is null");
   }
 
-  if (response.statusText === null) {
-    throw new Error("Failed to fetch data because response is null");
-  }
-  if (response.statusText !== "OK") {
-    throw new Error("Failed to fetch data because response is not OK");
-  }
   const data = response.data;
   if (!data) {
     throw new Error("Failed to fetch data because data is null");
