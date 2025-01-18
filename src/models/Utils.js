@@ -85,7 +85,7 @@ class Utils {
   }
   // Generate a unique identifier
   static generateUniqueId() {
-    return "_" + Math.random().toString(36).substr(2, 9);
+    return "_" + Math.random().toString(36).substring(2, 11);
   }
 
   // Deep clone an object
@@ -109,4 +109,4 @@ class Utils {
   }
 }
 
-module.exports = Utils;
+export default Utils;
