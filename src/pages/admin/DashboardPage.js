@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { fetchOrders } from "../../features/orderSlice";
+import { logout } from "../../features/authSlice"; // Import the logout action
 
 function DashboardPage() {
   const dispatch = useDispatch();
@@ -295,6 +296,13 @@ function DashboardPage() {
           </table>
         </div>
       )}
+
+      {/* Logout Button */}
+      <div className="d-flex justify-content-end mt-4">
+        <button className="btn btn-danger" onClick={() => dispatch(logout())}>
+          Logout
+        </button>
+      </div>
     </div>
   );
 }

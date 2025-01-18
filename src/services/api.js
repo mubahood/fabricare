@@ -2,7 +2,8 @@ import axios from "axios";
 import { DB_TOKEN } from "../models/Constants";
 
 const api = axios.create({
-  baseURL: "http://localhost/laundary-app-web/api", // Replace with your backend API base URL
+  //   baseURL: "http://localhost/laundary-app-web/api", // Replace with your backend API base URL
+  baseURL: "https://fabricare.hambren.com/api", // Replace with your backend API base URL
   headers: {
     "Content-Type": "application/json",
   },
