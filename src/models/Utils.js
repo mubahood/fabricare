@@ -1,3 +1,5 @@
+import { BASE_URL } from "./Constants";
+
 class Utils {
   // Convert an object to JSON string
   static toJson(obj) {
@@ -106,6 +108,26 @@ class Utils {
   // Format a date to a readable string
   static formatDate(date) {
     return date.toISOString().split("T")[0];
+  }
+
+  static img(url) {
+    var last_segment = url.split("/").pop();
+    if (last_segment === "undefined") {
+      return "";
+    }
+    if (last_segment === "null") {
+      return "";
+    }
+    if (last_segment === "") {
+      return "";
+    }
+    if (last_segment === null) {
+      return "";
+    }
+    if (last_segment === undefined) {
+      return "";
+    }
+    return BASE_URL + "/storage/images/" + last_segment;
   }
 }
 

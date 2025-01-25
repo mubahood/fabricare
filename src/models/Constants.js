@@ -1,4 +1,5 @@
-export const API_BASE_URL = "https://api.example.com";
+export const BASE_URL = "https://fabricare.hambren.com";
+export const API_BASE_URL = BASE_URL + "/api";
 export const TIMEOUT = 5000;
 export const MAX_RETRIES = 3;
 export const DATE_FORMAT = "YYYY-MM-DD";

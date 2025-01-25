@@ -1,9 +1,9 @@
 import axios from "axios";
-import { DB_TOKEN } from "../models/Constants";
+import { API_BASE_URL, DB_TOKEN } from "../models/Constants";
 
 const api = axios.create({
   //   baseURL: "http://localhost/laundary-app-web/api", // Replace with your backend API base URL
-  baseURL: "https://fabricare.hambren.com/api", // Replace with your backend API base URL
+  baseURL: API_BASE_URL, // Replace with your backend API base URL
   headers: {
     "Content-Type": "application/json",
   },
@@ -67,6 +67,7 @@ export const http_get = async (path) => {
   var response = null;
   try {
     response = await api.get(path);
+    // console.log(response);
   } catch (error) {
     console.error(error);
     throw new Error("Failed to fetch data because: " + error.message);
