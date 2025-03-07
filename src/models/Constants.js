@@ -1,4 +1,4 @@
-export const BASE_URL = "https://fabricare.hambren.com";
+export const BASE_URL = "https://admin.fabricare.app";
 export const API_BASE_URL = BASE_URL + "/api";
 export const TIMEOUT = 5000;
 export const MAX_RETRIES = 3;
