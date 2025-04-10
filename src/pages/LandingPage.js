@@ -290,7 +290,7 @@ function LandingPage() {
               <motion.button
                 onClick={() =>
                   window.open(
-                    "https://play.google.com/store/apps/details?id=com.laundary.app",
+                    "https://apps.apple.com/at/app/fabricare/id6742549427",
                     "_blank"
                   )
                 }

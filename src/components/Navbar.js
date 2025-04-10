@@ -32,9 +32,9 @@ function Navbar() {
               <li className="nav-item">
                 <a
                   className="nav-link d-flex align-items-center"
-                  href="tel:+18558003972"
+                  href="tel:+16479686445"
                 >
-                  <FaPhoneAlt className="me-1" /> +1 855-800-3972
+                  <FaPhoneAlt className="me-1" /> +16479686445
                 </a>
               </li>
 
